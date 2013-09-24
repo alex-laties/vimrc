@@ -17,8 +17,6 @@ let g:pymode_utils_whitespace = 0
 
 let g:tagbar_autofocus = 1
 
-
-
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
