@@ -15,6 +15,8 @@ let g:pymode_lint_checker = "pyflakes"
 let g:pymode_folding = 0
 let g:pymode_utils_whitespace = 0
 
+let g:haddock_browser = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
 let g:tagbar_autofocus = 1
 
 call pathogen#infect()
