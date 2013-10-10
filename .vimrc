@@ -19,6 +19,9 @@ let g:haddock_browser = "/Applications/Google Chrome.app/Contents/MacOS/Google C
 
 let g:tagbar_autofocus = 1
 
+let g:vaxe_prefer_openfl = 1
+let g:vaxe_prefer_first_in_directory = 1
+
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
