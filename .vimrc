@@ -10,6 +10,7 @@ let g:html_indent_style = "inc"
 
 let g:airline_enable_branch = 1
 let g:airline_branch_empty_message = ''
+let g:airline#extensions#tagbar#enabled = 0
 
 let g:pymode_lint_checker = "pyflakes"
 let g:pymode_folding = 0
@@ -37,7 +38,6 @@ nnoremap <C-t> :tabnew<CR>
 set expandtab
 set shiftwidth=4
 set tabstop=4
-set tags=~/tags
 set smarttab
 set laststatus=2
 syntax on
