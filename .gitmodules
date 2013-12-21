@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vaxe"]
 	path = .vim/bundle/vaxe
 	url = git@github.com:jdonaldson/vaxe.git
+[submodule ".vim/bundle/vim-dispatch"]
+	path = .vim/bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
