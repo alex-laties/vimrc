@@ -40,5 +40,6 @@ set shiftwidth=4
 set tabstop=4
 set smarttab
 set laststatus=2
+set rtp+=$GOROOT/misc/vim
 syntax on
 filetype plugin indent on
