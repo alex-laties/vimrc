@@ -2,7 +2,7 @@ colorscheme molokai
 
 let mapleader = ","
 
-let g:pathogen_disabled = []
+let g:pathogen_disabled = ["python-mode"]
 
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -36,8 +36,8 @@ map <Leader>t :TagbarToggle<CR>
 map <Leader>ga :!git add %<CR>
 nnoremap <C-t> :tabnew<CR>
 set expandtab
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set smarttab
 set laststatus=2
 set rtp+=$GOROOT/misc/vim
