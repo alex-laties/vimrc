@@ -31,3 +31,9 @@
 [submodule ".vim/bundle/puppet-syntax-vim"]
 	path = .vim/bundle/puppet-syntax-vim
 	url = git@github.com:puppetlabs/puppet-syntax-vim.git
+[submodule "git@github.com:scrooloose/syntastic.git"]
+	path = git@github.com:scrooloose/syntastic.git
+	url = ./vim/bundle/syntastic
+[submodule ".vim/bundle/haproxy.vim"]
+	path = .vim/bundle/haproxy.vim
+	url = git@github.com:sclo/haproxy.vim.git
