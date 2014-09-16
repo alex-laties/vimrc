@@ -35,6 +35,8 @@ map <Leader>p :ptag<CR>
 map <Leader>t :TagbarToggle<CR>
 map <Leader>ga :!git add %<CR>
 nnoremap <C-t> :tabnew<CR>
+
+set nocompatible
 set expandtab
 set shiftwidth=2
 set tabstop=2
