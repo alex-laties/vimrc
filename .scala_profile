@@ -1,0 +1,1 @@
+export PATH=~/.scala/curr-scala/bin:$PATH
