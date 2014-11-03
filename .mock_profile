@@ -1,0 +1,2 @@
+alias mock_sl_6.4='mock -r SL-6.4-x86_64'
+alias mock_el_5='mock -r centos-5.8-x86_64'

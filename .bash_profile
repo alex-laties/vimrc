@@ -23,3 +23,4 @@ alias l="ls -al --color=auto"
 . ~/.go_profile
 . ~/.git_profile
 . ~/.scala_profile
+. ~/.mock_profile
