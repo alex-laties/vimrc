@@ -1,1 +1,9 @@
-export GOPATH=/home/agl/.go/
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+  export GOPATH=/home/agl/.go/
+  export PATH=/home/agl/.go/bin/:$PATH
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  export GOPATH=/Users/agl/.go/
+  export PATH=/Users/agl/.go/bin/:$PATH
+fi
+export GO15VENDOREXPERIMENT=1
