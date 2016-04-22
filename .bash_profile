@@ -29,10 +29,6 @@ if [ -f /usr/libexec/java_home ]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
 fi
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-alias cs="collins-shell"
-
 if [[ $platform == 'linux' ]]; then
   alias l="ls -al --color=auto"
   alias ls="ls --color=auto"

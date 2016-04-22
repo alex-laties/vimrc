@@ -6,4 +6,3 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
   export GOPATH=/Users/agl/.go/
   export PATH=/Users/agl/.go/bin/:$PATH
 fi
-export GO15VENDOREXPERIMENT=1

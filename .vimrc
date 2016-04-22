@@ -2,21 +2,50 @@ colorscheme molokai
 
 let mapleader = ","
 
-let g:pathogen_disabled = ["python-mode"]
-
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:html_indent_script1 = "inc"
-let g:html_indent_style = "inc"
+let g:acp_enableAtStartup = 0
 
 let g:airline_enable_branch = 1
 let g:airline_branch_empty_message = ''
 let g:airline#extensions#tagbar#enabled = 0
 
+let g:haddock_browser = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_script1 = "inc"
+let g:html_indent_style = "inc"
+
+let g:go_def_mapping_enabled = 0
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+let g:neocomplete#sources#dictionary#dictionaries = {
+  \ 'default' : '',
+  \ 'vimshell': $HOME.'/.vimshell_hist',
+  \ 'scheme'  : $HOME.'/.gosh_completions',
+  \ }
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+
+let g:pathogen_disabled = ["python-mode"]
+
 let g:pymode_lint_checker = "pyflakes"
 let g:pymode_folding = 0
 let g:pymode_utils_whitespace = 0
 
-let g:haddock_browser = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 let g:tagbar_autofocus = 1
 
@@ -35,6 +64,26 @@ map <Leader>p :ptag<CR>
 map <Leader>t :TagbarToggle<CR>
 map <Leader>ga :!git add %<CR>
 nnoremap <C-t> :tabnew<CR>
+" autocomplete settings
+" autocomplete with ENTER
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return pumvisible() ? "\<C-y>" : "\<CR>"
+endfunction
+" autocomplete with TAB
+inoremap <expr><TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+" Close popup and delete like normal on BACKSPACE
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" Close popup by SPACE 
+inoremap <expr><Space> pumvisible() ? "\<C-e><Space>" : "\<Space>"
+
+" golang (vim-go) shortcuts
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gp <Plug>(go-implements)
+au FileType go nmap <Leader>gi <Plug>(go-info)
+au FileType go nmap <Leader>gr <Plug>(go-rename)
 
 set nocompatible
 set expandtab
