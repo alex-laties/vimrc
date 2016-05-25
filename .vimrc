@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme fruit
 
 let mapleader = ","
 
@@ -57,7 +57,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 inoremap kj <ESC>
-map <Leader>s :Sscratch<CR>
+map <Leader>s :Scratch<CR>
 map <Leader>a :tabp<CR>
 map <Leader>d :tabn<CR>
 map <Leader>p :ptag<CR>

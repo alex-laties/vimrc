@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/neocomplete"]
 	path = .vim/bundle/neocomplete
 	url = https://github.com/shougo/neocomplete.vim
+[submodule ".vim/bundle/scratch"]
+	path = .vim/bundle/scratch
+	url = git@github.com:mtth/scratch.vim.git
