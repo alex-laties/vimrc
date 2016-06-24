@@ -1,4 +1,4 @@
-colorscheme fruit
+colorscheme molokai
 
 let mapleader = ","
 
