@@ -55,3 +55,9 @@
 [submodule ".vim/bundle/scratch"]
 	path = .vim/bundle/scratch
 	url = git@github.com:mtth/scratch.vim.git
+[submodule ".vim/bundle/vim-puppet"]
+	path = .vim/bundle/vim-puppet
+	url = git@github.com:rodjek/vim-puppet.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git

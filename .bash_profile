@@ -1,6 +1,6 @@
 # .bash_profile
 platform='unknown'
-unamestr=`uname`
+unamestr=$(uname)
 if [[ "$unamestr" == 'Linux' ]]; then
   platform='linux'
 elif [[ "$unamestr" == 'Darwin' ]]; then
@@ -8,8 +8,8 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 
 # only if archey is available
-if [ -f `which archey` ]; then
-  archey -c
+if [ -f "$(which archey)" ]; then
+  archey -c -o
 fi
 
 # Get the aliases and functions
@@ -32,9 +32,20 @@ fi
 if [[ $platform == 'linux' ]]; then
   alias l="ls -al --color=auto"
   alias ls="ls --color=auto"
+  source /etc/bash_completion.d/git
 elif [[ $platform == 'darwin' ]]; then
   alias l="ls -alG"
   alias ls="ls -G"
+  source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 fi
+
+#share history across bash sessions
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 for i in `ls -a ~/ | grep profile$ | grep -v bash_profile`; do . $i; done

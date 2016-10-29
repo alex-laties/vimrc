@@ -38,12 +38,6 @@ let g:neocomplete#sources#dictionary#dictionaries = {
   \ }
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
-let g:pathogen_disabled = ["python-mode"]
-
-let g:pymode_lint_checker = "pyflakes"
-let g:pymode_folding = 0
-let g:pymode_utils_whitespace = 0
-
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
@@ -84,13 +78,17 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>gp <Plug>(go-implements)
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gr <Plug>(go-rename)
+au FileType go nmap <Leader>gb <Plug>(go-build)
 
 set nocompatible
+
+set autoindent
+set backspace=indent,eol,start
 set expandtab
+set laststatus=2
+set rtp+=$GOROOT/misc/vim
 set shiftwidth=2
 set tabstop=2
 set smarttab
-set laststatus=2
-set rtp+=$GOROOT/misc/vim
 syntax on
 filetype plugin indent on
