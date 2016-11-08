@@ -1,10 +1,18 @@
 # .bash_profile
 platform='unknown'
 unamestr=$(uname)
-if [[ "$unamestr" == 'Linux' ]]; then
+if [ -d "/mnt/c/Users" ]; then
+  platform='windows'
+elif [[ "$unamestr" == 'Linux' ]]; then
   platform='linux'
 elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='darwin'
+fi
+
+# we have to modify default coloring on windows
+if [[ $platform == 'windows' ]]; then
+  LS_COLORS="ow=01;36;40" && export LS_COLORS
+  export WINDOWS10=0
 fi
 
 # only if archey is available

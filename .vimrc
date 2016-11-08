@@ -1,4 +1,4 @@
-colorscheme molokai
+colorscheme oceanblack
 
 let mapleader = ","
 
@@ -79,6 +79,15 @@ au FileType go nmap <Leader>gp <Plug>(go-implements)
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gr <Plug>(go-rename)
 au FileType go nmap <Leader>gb <Plug>(go-build)
+
+" fix bash on windows arrow issues
+let windows10=$WINDOWS10
+if windows10 == '0'
+  set t_ku=[A
+  set t_kd=[B
+  set t_kr=[C
+  set t_kl=[D
+endif
 
 set nocompatible
 

@@ -1,8 +1,7 @@
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]]; then
-  export GOPATH=/home/agl/.go/
-  export PATH=/home/agl/.go/bin/:$PATH
-elif [[ "$unamestr" == 'Darwin' ]]; then
-  export GOPATH=/Users/agl/.go/
-  export PATH=/Users/agl/.go/bin/:$PATH
+if [[ "$platform" == 'windows' ]]; then
+  export GOPATH=~/go/
+  export PATH=~/go/bin/:$PATH
+else
+  export GOPATH=~/.go/
+  export PATH=~/.go/bin/:$PATH
 fi
