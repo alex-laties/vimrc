@@ -8,7 +8,6 @@ elif [[ "$unamestr" == 'Linux' ]]; then
 elif [[ "$unamestr" == 'Darwin' ]]; then
   platform='darwin'
 fi
-
 # we have to modify default coloring on windows
 if [[ $platform == 'windows' ]]; then
   LS_COLORS="ow=01;36;40" && export LS_COLORS
@@ -16,7 +15,7 @@ if [[ $platform == 'windows' ]]; then
 fi
 
 # only if archey is available
-if [ -f "$(which archey)" ]; then
+if [ -f "$(which archey 2>/dev/null)" ]; then
   archey -c -o
 fi
 
@@ -38,9 +37,8 @@ if [ -f /usr/libexec/java_home ]; then
 fi
 
 if [[ $platform == 'linux' ]]; then
-  alias l="ls -al --color=auto"
-  alias ls="ls --color=auto"
-  source /etc/bash_completion.d/git
+  alias l="ls -F -al --color=auto"
+  alias ls="ls -F --color=auto"
 elif [[ $platform == 'darwin' ]]; then
   alias l="ls -alG"
   alias ls="ls -G"
