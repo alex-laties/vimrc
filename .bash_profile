@@ -11,7 +11,7 @@ fi
 # we have to modify default coloring on windows
 if [[ $platform == 'windows' ]]; then
   LS_COLORS="ow=01;36;40" && export LS_COLORS
-  export WINDOWS10=0
+  export WINDOWS10=1
 fi
 
 # only if archey is available
