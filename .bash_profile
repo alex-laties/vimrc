@@ -42,7 +42,6 @@ if [[ $platform == 'linux' ]]; then
 elif [[ $platform == 'darwin' ]]; then
   alias l="ls -alG"
   alias ls="ls -G"
-  source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 fi
 
 #share history across bash sessions
