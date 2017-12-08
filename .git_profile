@@ -6,6 +6,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gcam='git commit -a -m'
 alias gclean='git branch | grep -v master | xargs git branch -d'
+alias gpurge='git branch | grep -v master | xargs git branch -D'
 alias gburn='git branch -D'
 
-alias gwtf='echo "gmp gs gclean gcam gburn"'
+alias gwtf='echo "gmp gs gclean gpurge gcam gburn"'

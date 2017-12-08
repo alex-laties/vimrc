@@ -31,11 +31,6 @@ fi
 PATH=$PATH:$HOME/bin
 export PATH
 
-#JAVA
-if [ -f /usr/libexec/java_home ]; then
-  export JAVA_HOME=$(/usr/libexec/java_home)
-fi
-
 if [[ $platform == 'linux' ]]; then
   alias l="ls -F -al --color=auto"
   alias ls="ls -F --color=auto"
@@ -53,4 +48,11 @@ shopt -s histappend                      # append to history, don't overwrite it
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-for i in `ls -a ~/ | grep profile$ | grep -v bash_profile`; do . $i; done
+for i in `ls -a ~/ | grep profile$ | grep -v bash_profile`; do . ~/$i; done
+export BOUNCEX_USERNAME=alex-laties
+PATH=~/.scripts:$PATH
+export PATH=$PATH:/Users/alaties/.node/bin:/usr/local/bin/node
+source /etc/bash_completion.d/bx
+# BEGIN ANSIBLE MANAGED BLOCK
+source ~/.bash_launch
+# END ANSIBLE MANAGED BLOCK

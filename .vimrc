@@ -99,5 +99,6 @@ set rtp+=$GOROOT/misc/vim
 set shiftwidth=2
 set tabstop=2
 set smarttab
+set mouse=a
 syntax on
 filetype plugin indent on
