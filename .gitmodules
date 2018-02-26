@@ -61,3 +61,21 @@
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/editorconfig-vim"]
+	path = .vim/bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
+[submodule ".vim/bundle/cisco"]
+	path = .vim/bundle/cisco
+	url = git@github.com:momota/cisco.vim.git
+[submodule ".vim/bundle/vimproc"]
+	path = .vim/bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule ".vim/bundle/unite"]
+	path = .vim/bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+[submodule ".vim/bundle/phpcomplete-extended"]
+	path = .vim/bundle/phpcomplete-extended
+	url = https://github.com/m2mdas/phpcomplete-extended.git
+[submodule ".vim/bundle/vdebug"]
+	path = .vim/bundle/vdebug
+	url = git@github.com:joonty/vdebug.git

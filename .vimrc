@@ -46,6 +46,8 @@ let g:tagbar_autofocus = 1
 let g:vaxe_prefer_openfl = 1
 let g:vaxe_prefer_first_in_directory = 1
 
+let g:vdebug_options = { 'port': 9009, 'ide_key': "IDESESSION", 'path_maps': { '/test': '/Users/alaties/bx/codebase/bounceexchange' }}
+
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -99,6 +101,5 @@ set rtp+=$GOROOT/misc/vim
 set shiftwidth=2
 set tabstop=2
 set smarttab
-set mouse=a
 syntax on
 filetype plugin indent on
