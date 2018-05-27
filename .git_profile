@@ -1,6 +1,8 @@
 source ~/.git-prompt.sh
 source ~/.git-completion.bash
 
+git config --global help.autoCorrect 1
+
 alias gmp='git checkout master && git pull --ff-only'
 alias gs='git status'
 alias gd='git diff'

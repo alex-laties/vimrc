@@ -39,14 +39,19 @@ let g:neocomplete#sources#dictionary#dictionaries = {
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_php_checkers = ['php']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {"mode" : "active", "active_filetypes": ["php"], "passive_filetypes": ["go", "c"]}
 
 let g:tagbar_autofocus = 1
 
 let g:vaxe_prefer_openfl = 1
 let g:vaxe_prefer_first_in_directory = 1
 
-let g:vdebug_options = { 'port': 9009, 'ide_key': "IDESESSION", 'path_maps': { '/test': '/Users/alaties/bx/codebase/bounceexchange' }}
+let g:vdebug_options = { 'port': 9009, 'ide_key': "IDESESSION", 'path_maps': { '/test': '/Users/alaties/bx/codebase/bounceexchange', '/var/www/vhosts/bounceexchange.com': '/Users/alaties/bx/codebase/bounceexchange'}}
 
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
@@ -57,7 +62,7 @@ map <Leader>s :Scratch<CR>
 map <Leader>a :tabp<CR>
 map <Leader>d :tabn<CR>
 map <Leader>p :ptag<CR>
-map <Leader>t :TagbarToggle<CR>
+map <Leader>t :ter<CR>
 map <Leader>ga :!git add %<CR>
 nnoremap <C-t> :tabnew<CR>
 " autocomplete settings
@@ -92,7 +97,9 @@ if windows10 == '0'
 endif
 
 set nocompatible
-
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 set autoindent
 set backspace=indent,eol,start
 set expandtab
